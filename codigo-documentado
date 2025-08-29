@@ -1,0 +1,50 @@
+// se importa la clase Scanner desde el paquete java.util
+// nos permite leer entradas desde el teclado
+import java.util.Scanner; 
+
+// se define la clase principal llamada vehiculo
+// en java todo el codigo debe estar contenido en una clase
+public class vehiculo {
+
+// metodo principal (main) se ejecuta al iniciar el programa
+// - public: el metodo puede ser accedido desde cualquier lugar
+// - static: no requiere de un objeto de la clase para ejecutarse
+// - void: no devuelve valor
+// - string [] args: parametro que permite recibir argumentos desde la linea de comandos
+    public static void main(String[] args) {
+
+// se abrevia Scanner a cs, lee datos ingresados por teclado
+// "System.in" indica que la entrada sera desde el teclado
+        Scanner sc = new Scanner(System.in);
+      
+// String marca: string tipo de dato que almacena texto, se declaran variables
+// int: tipo de datos que almacena numeros enteros
+
+        System.out.print("Ingrese la marca: ");
+        String marca = sc.nextLine();
+
+        System.out.print("Ingrese el modelo: ");
+        String modelo = sc.nextLine();
+
+        System.out.print("Ingrese la cilindrada: ");
+        String cilindrada = sc.nextLine();
+
+        System.out.print("Ingrese el tipo de combustible: ");
+        String combustible = sc.nextLine();
+
+// netInt() lee un numero ingresado por el usuario    
+        System.out.print("Ingrese la capacidad en pasajeros: ");
+        int pasajeros = sc.nextInt();
+
+      // se muestran los datos en pantalla utilizando (+) para concatenar los textos
+      // cada System.out.println donde "ln" sirve para generar un salto de linea despues del texto
+        System.out.println("\nLa marca que ha ingresado es: " + marca);
+        System.out.println("El modelo que ha ingresado es: " + modelo);
+        System.out.println("La cilindrada que ha ingresado es: " + cilindrada);
+        System.out.println("El tipo de combustible es: " + combustible);
+        System.out.println("Tiene una capacidad de " + pasajeros + " pasajeros.");
+
+// se cierra el objeto Scanner
+        sc.close();
+    }
+}
