@@ -1,0 +1,17 @@
+Como usuario1
+Quiero que el programa me permita ingresar la marca de un vehiculo y su modelo
+Para que el programa registre y muestre los resultados por pantalla
+Criterio de aceptacion: los datos se muestran correctamente despues de ingresarlos
+
+
+Como usuario2
+Quiero ingresar la cilindrada y el tipo de combustible
+Para obtener mas detalles del vehiculo
+Criterio de aceptacion: la informacion aparece correctamente en pantalla
+
+
+
+Como usuario 3
+Quiero ingresar la cantidad de pasajeros
+Para conocer la cantidad de personas que puede transportar el vehiculo
+Criterios de aceptacion: la informacion aparece correctamente en pantalla
