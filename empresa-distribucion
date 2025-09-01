@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Empresa {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        
+        System.out.print("Ingrese el total de la compra: ");
+        int totalCompra = sc.nextInt();
+
+        System.out.print("Ingrese la cantidad de km a destino: ");
+        int distancia = sc.nextInt();
+
+        double costoDespacho = calcularDespacho(totalCompra, distancia);
+
+        
+        System.out.println();
+        System.out.println("Resumen del pedido");
+	System.out.println();
+        System.out.println("Total de la compra: $" + totalCompra);
+        System.out.println("Distancia: " + distancia + " km");
+        if (costoDespacho == 0) {
+            System.out.println("El despacho es gratuito");
+        } else {
+            System.out.println("El costo de despacho es: $" + costoDespacho);
+        }
+
+        sc.close();
+    }
+
+    
+    private static double calcularDespacho(int totalCompra, int distancia) {
+        if (totalCompra >= 50000 && distancia <= 20) {
+            return 0; // Gratis
+        } else if (totalCompra >= 25000 && totalCompra < 50000) {
+            return distancia * 150;
+        } else {
+            return distancia * 300;
+        }
+    }
+}
